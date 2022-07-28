@@ -18,8 +18,8 @@ Before installing npm modules and run the project, create '.env' file to the pro
 
 
 Now, add following commands to the project:
->npm install
->npm install nodemon -D
+>npm install &&
+>npm install nodemon -D &&
 >npm start
 
 App runs on the port 5000 or else provide port value in .env file
