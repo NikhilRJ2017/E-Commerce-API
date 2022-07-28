@@ -3,7 +3,7 @@
 Link to api documentation: https://e-commerce-apis-18.herokuapp.com/
 
 
-# Method to install locally
+# Steps to install locally
 
 Before installing npm modules and run the project, create '.env' file to the project with following entries: 
 
