@@ -140,9 +140,11 @@ const updateOrder = async (req, res) => {
         throw new NotFoundError(`No order with id ${orderId}`);
     }
 
-    checkPermissions(req.user, order.user);
+    //?send order.user._id because of populate user object has been polluted with name
+    checkPermissions(req.user, order.user._id);
 
     order.paymentIntentId = paymentIntentId;
+    //?here we are hard coding the status but stripe has methods to send us the status, we can update those values
     order.status = 'paid';
     await order.save();
 
